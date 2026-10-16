@@ -1,0 +1,74 @@
+{
+  "benign_example": {
+    "anomaly_decision": "not_flagged",
+    "anomaly_score": 0.463358,
+    "raw_isolation_forest_score": -0.322933,
+    "score_type": "benign_reference_percentile_anomaly_score",
+    "threshold": 0.9,
+    "reliability": null,
+    "reliability_status": "not_calibrated",
+    "model": "IsolationForest",
+    "model_version": "candidate_1",
+    "explanation_method": "benign_percentile_feature_deviation",
+    "top_deviations": []
+  },
+  "dos_hulk_example": {
+    "anomaly_decision": "suspicious",
+    "anomaly_score": 0.968014,
+    "raw_isolation_forest_score": -0.471842,
+    "score_type": "benign_reference_percentile_anomaly_score",
+    "threshold": 0.9,
+    "reliability": null,
+    "reliability_status": "not_calibrated",
+    "model": "IsolationForest",
+    "model_version": "candidate_1",
+    "explanation_method": "benign_percentile_feature_deviation",
+    "top_deviations": [
+      {
+        "feature": "Packet_Length_Variance",
+        "observed_value": 0.15885,
+        "benign_p05": 0.0,
+        "benign_p95": 0.025345,
+        "direction": "above_benign_range",
+        "deviation_magnitude": 5.267527,
+        "explanation": "Packet_Length_Variance is above benign range compared with the benign reference."
+      },
+      {
+        "feature": "Bwd_Packet_Length_Std",
+        "observed_value": 0.266328,
+        "benign_p05": 0.0,
+        "benign_p95": 0.09492,
+        "direction": "above_benign_range",
+        "deviation_magnitude": 1.805808,
+        "explanation": "Bwd_Packet_Length_Std is above benign range compared with the benign reference."
+      },
+      {
+        "feature": "Average_Packet_Size",
+        "observed_value": 0.341809,
+        "benign_p05": 0.0,
+        "benign_p95": 0.127342,
+        "direction": "above_benign_range",
+        "deviation_magnitude": 1.684186,
+        "explanation": "Average_Packet_Size is above benign range compared with the benign reference."
+      },
+      {
+        "feature": "Bwd_Packet_Length_Mean",
+        "observed_value": 0.333161,
+        "benign_p05": 0.0,
+        "benign_p95": 0.129225,
+        "direction": "above_benign_range",
+        "deviation_magnitude": 1.578148,
+        "explanation": "Bwd_Packet_Length_Mean is above benign range compared with the benign reference."
+      },
+      {
+        "feature": "Avg_Bwd_Segment_Size",
+        "observed_value": 0.333161,
+        "benign_p05": 0.0,
+        "benign_p95": 0.129225,
+        "direction": "above_benign_range",
+        "deviation_magnitude": 1.578148,
+        "explanation": "Avg_Bwd_Segment_Size is above benign range compared with the benign reference."
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "calibrator": "IsotonicRegression",
+  "model": "IsolationForest",
+  "model_version": "candidate_1",
+  "experiment_sample_size": 20000,
+  "calibration_sample_size": 12000,
+  "evaluation_sample_size": 8000,
+  "sample_attack_rate": 0.5,
+  "roc_auc_anomaly_score": 0.85529921,
+  "calibrated_brier_score": 0.12323851192743486,
+  "baseline_brier_score": 0.25,
+  "calibrated_log_loss": 0.3707000034565299,
+  "baseline_log_loss": 0.6931471805599454,
+  "reliability_status": "candidate_not_independently_validated",
+  "limitations": [
+    "Calibration experiment uses a balanced sample.",
+    "Calibration and evaluation examples come from the same underlying dataset.",
+    "Predicted probabilities are not established as real-world attack probabilities.",
+    "Real-world prevalence and distribution shift have not been validated."
+  ]
+}
